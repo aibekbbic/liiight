@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800&family=Ysabeau+SC:wght@400;500;600;700;800&display=swap");
+body * {
+  border: 1px solid red;
+  font-family: "Wix Madefor Display", sans-serif;
+  font-family: "Ysabeau SC", sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  padding: 0px;
+  font-size: 12px;
+  margin: 0px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: rgb(138, 171, 138);
+}
