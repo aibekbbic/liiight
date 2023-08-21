@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#8aab8a" />
+    <title>React JS</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- svg start -->
+    <svg width="0" height="0" class="hidden">
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        viewBox="0 0 24 24"
+        id="home-icon"
+      >
+        <path
+          d="M22 11.414v12.586h-20v-12.586l-1.293 1.293-.707-.707 12-12 12 12-.707.707-1.293-1.293zm-6 11.586h5v-12.586l-9-9-9 9v12.586h5v-9h8v9zm-1-7.889h-6v7.778h6v-7.778z"
+        ></path>
+      </symbol>
+    </svg>
+    <!-- svg end -->
+    <!-- header start -->
+    <header class="header">
+      <a
+        class="header__logo"
+        href="https://aibekbbic.github.io/mywebsite/new-project.html"
+        target="_blank"
+      >
+        <svg class="logo header__logo">
+          <use xlink:href="#home-icon"></use>
+        </svg>
+      </a>
+      <h1>Light</h1>
+    </header>
+    <!-- header end -->
+    <section class="content">
+      <figure>
+        <img
+          src="https://www.pngall.com/wp-content/uploads/12/Light-Fixture-Lamp-Transparent.png"
+          alt=""
+          class="lamp"
+        />
+        <div class="light"></div>
+      </figure>
+    </section>
+    <main class="main">
+      <container class="container">
+        <!-- aside start -->
+        <aside class="aside">
+          <!--  -->
+          <label class="on-off-block">
+            <div class="on-off-title">Power</div>
+            <input type="checkbox" checked class="real-power-checkbox" />
+            <div class="fake-power-checkbox"></div>
+          </label>
+          <!--  -->
+          <div class="percents-block">
+            <div class="percents">100%</div>
+            <div class="percents-title">Brightness</div>
+          </div>
+        </aside>
+        <!-- aside end -->
+        <!-- content -->
+      </container>
+      <section class="range-block">
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="100"
+          step="25"
+          class="real-range-adjustment"
+        />
+      </section>
+    </main>
+
+    <footer class="footer"><small>Aibekbbic 2023</small></footer>
+    <div class="bgstyle">
+      <div class="bgstyle_circle_1 decor"></div>
+      <div class="bgstyle_circle_2 decor"></div>
+    </div>
+    <script src="./react.js"></script>
+  </body>
+</html>
