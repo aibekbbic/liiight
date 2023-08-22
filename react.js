@@ -33,24 +33,24 @@ range.addEventListener("input", function (e) {
   if (range.value > 0) {
     checkbox.checked = true;
     decorations.forEach((item) => {
-      item.style.cssText = "background-color: rgb(138, 171, 211)";
+      item.style.cssText = "background-color: rgba(138, 171, 211, 1)";
     });
   } else if (range.value < 25) {
     checkbox.checked = false;
     decorations.forEach((item) => {
-      item.style.cssText = "background-color: rgb(128, 121, 128)";
+      item.style.cssText = "background-color: rgba(128, 121, 128, 1)";
     });
   }
   // убираем/добавляем тень лампы
   let lamp_shadow = e.target.value / 30;
   let lamp_color_1 = e.target.value / 14 + 127;
   let lamp_color_2 = e.target.value / 2.5 + 121;
-  lamp.style.cssText = `filter: drop-shadow(25px -21px ${lamp_shadow}px rgb(${lamp_color_1} ${lamp_color_2} ${lamp_color_1}));
+  lamp.style.cssText = `filter: drop-shadow(25px -21px ${lamp_shadow}px rgba(${lamp_color_1}, ${lamp_color_2}, ${lamp_color_1}, 1));
  `;
   //  изменим цвет фона
   let bg_color_1 = e.target.value / 10 + 128;
   let bg_color_2 = e.target.value / 2 + 121;
-  body.style.cssText = `background-color: rgb(${bg_color_1}, ${bg_color_2}, ${bg_color_1})`;
+  body.style.cssText = `background-color: rgba(${bg_color_1}, ${bg_color_2}, ${bg_color_1}, 1)`;
   //
 });
 
@@ -59,7 +59,7 @@ on_off_block.addEventListener("click", function () {
   audio.play();
   if (checkbox.checked) {
     // изменим цвет фона
-    body.style.cssText = "background-color: rgb(138 171 138)";
+    body.style.cssText = "background-color: rgba(138, 171, 138, 1)";
     // сделаем значение input range = 100
     range.value = 100;
     // сделаем 100%
@@ -68,14 +68,14 @@ on_off_block.addEventListener("click", function () {
     light.style.cssText = "box-shadow: 0px 5px 22px 10px";
     // добавим тень
     lamp.style.cssText =
-      "filter: drop-shadow(25px -21px 3px rgb(135 161 135));";
+      "filter: drop-shadow(25px -21px 3px rgba(135, 161, 135, 1));";
     //
     decorations.forEach((item) => {
-      item.style.cssText = "background-color: rgb(138, 171, 211)";
+      item.style.cssText = "background-color: rgba(138, 171, 211, 1)";
     });
   } else if (!checkbox.checked) {
     // изменим цвет фона
-    body.style.cssText = "background-color: rgb(128 121 128);";
+    body.style.cssText = "background-color: rgba(128, 121, 128, 1);";
     // сделаем значение input range = 0
     range.value = 0;
     // сделаем 0%
@@ -83,12 +83,10 @@ on_off_block.addEventListener("click", function () {
     // откл лампочку
     light.style.cssText = "box-shadow: 0px 0px 2px 0px";
     // удаляем тень
-    lamp.style.filter = "drop-shadow(25px -21px 0px rgb(128 121 128))";
+    lamp.style.filter = "drop-shadow(25px -21px 0px rgba(128, 121, 128, 1))";
     //
     decorations.forEach((item) => {
-      item.style.cssText = "background-color: rgb(128, 121, 128)";
+      item.style.cssText = "background-color: rgba(128, 121, 128, 1)";
     });
   }
 });
-
-function vibrateElem() {}
