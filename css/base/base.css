@@ -3,9 +3,8 @@ body * {
   border: 1px solid red;
   font-family: "Wix Madefor Display", sans-serif;
   font-family: "Ysabeau SC", sans-serif;
-}
-* {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+ 
+
 }
 
 html {
