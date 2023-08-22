@@ -1,26 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
-
 body * {
   margin: 0px;
   padding: 0px;
-  // border: 1px solid red;
   font-family: "Montserrat", sans-serif;
   color: white;
   line-height: 1.3em;
   box-sizing: content-box;
   position: relative;
 }
+
 html {
   margin: 0px;
   padding: 0px;
   height: 100%;
 }
+
 body {
   margin: 0px;
   padding: 0px;
   scroll-behavior: smooth;
   overflow: hidden;
-  background-color: rgb(138 171 138);
+  background-color: rgb(138, 171, 138);
   box-sizing: content-box;
   transition: all 0.3s ease-in;
   width: 100vw;
@@ -28,4 +28,4 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+}/*# sourceMappingURL=base.css.map */
