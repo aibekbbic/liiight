@@ -6,6 +6,11 @@ const checkbox = document.querySelector(".real-power-checkbox");
 const on_off_block = document.querySelector(".on-off-block");
 const body = document.querySelector("body");
 const decorations = document.querySelectorAll(".decor");
+//
+let audio = new Audio();
+// audio.preload = "auto";
+audio.src = "./zvuk-vklyucheniya.mp3";
+//
 
 range.addEventListener("input", function (e) {
   // показываем процент
@@ -50,13 +55,8 @@ range.addEventListener("input", function (e) {
 });
 
 on_off_block.addEventListener("click", function () {
-  //
-  let audio = new Audio();
-  // audio.preload = "auto";
-  audio.src = "./4fc0aecf091d868.mp3";
-  audio.play();
-  //
   window.navigator.vibrate(5);
+  audio.play();
   if (checkbox.checked) {
     // изменим цвет фона
     body.style.cssText = "background-color: rgb(138 171 138)";
