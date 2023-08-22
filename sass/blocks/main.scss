@@ -85,15 +85,19 @@
 }
 .content {
   max-width: 350px;
-  width: 100%;
+  width: 100vw;
   position: absolute;
   top: 0;
   right: 5%;
+  transform: translateX(0%);
   // border: 1px solid blue;
 }
 figure {
-  width: auto;
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350px;
+  display: block;
 }
 figure::after {
   content: "";
@@ -139,12 +143,14 @@ figure::after {
 .range-block {
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
 }
 .real-range-adjustment {
   width: 250px;
+  margin-bottom: 25px;
   appearance: none;
 }
 .real-range-adjustment::-webkit-slider-thumb {
@@ -188,8 +194,20 @@ figure::after {
   border: 1px solid rgb(138, 171, 211);
 }
 //
-
-.fake-range-adjustment {
+.lamp-icon-block {
+  display: flex;
+  justify-content: space-between;
+  width: 270px;
+}
+.icon {
+}
+.lamp-icon {
+  display: block;
+  width: 25px;
+  height: 25px;
+  & use {
+    fill: white;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -201,6 +219,13 @@ figure::after {
 @media (max-width: 760px) {
   .main {
     margin: 0 20px;
+  }
+  .content {
+    overflow-x: clip;
+    z-index: -1;
+  }
+  figure {
+    transform: translateX(-10%);
   }
   .lamp {
     transform: translate(26%, 0%);
