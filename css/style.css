@@ -26,6 +26,7 @@ body {
           box-sizing: content-box;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+  width: 100vw;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -222,15 +223,20 @@ h1 {
 
 .content {
   max-width: 350px;
-  width: 100%;
+  width: 100vw;
   position: absolute;
   top: 0;
   right: 5%;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 figure {
-  width: auto;
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350px;
+  display: block;
 }
 
 figure::after {
@@ -286,6 +292,10 @@ figure::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -297,6 +307,7 @@ figure::after {
 
 .real-range-adjustment {
   width: 250px;
+  margin-bottom: 25px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -347,6 +358,25 @@ figure::after {
   border: 1px solid rgb(138, 171, 211);
 }
 
+.lamp-icon-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 270px;
+}
+
+.lamp-icon {
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+.lamp-icon use {
+  fill: white;
+}
+
 @media (max-width: 1200px) {
   .main {
     width: auto;
@@ -356,6 +386,14 @@ figure::after {
 @media (max-width: 760px) {
   .main {
     margin: 0 20px;
+  }
+  .content {
+    overflow-x: clip;
+    z-index: -1;
+  }
+  figure {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
   }
   .lamp {
     -webkit-transform: translate(26%, 0%);
