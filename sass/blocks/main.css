@@ -109,11 +109,12 @@ figure {
 figure::after {
   content: "";
   display: block;
-  width: 100%;
+  width: 350px;
+  height: 350px;
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translate(-50%, -36%);
+  right: 50%;
+  transform: translate(20%, 0%);
   background-image: url(../imges/1692396089307.png);
   background-position: center;
   z-index: 6;
@@ -240,6 +241,9 @@ figure::after {
   }
   figure {
     transform: translateX(-10%);
+  }
+  figure::after {
+    transform: translateX(76%);
   }
   .lamp {
     transform: translate(26%, 0%);
