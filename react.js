@@ -45,7 +45,7 @@ range.addEventListener("input", function (e) {
   let lamp_shadow = e.target.value / 30;
   let lamp_color_1 = e.target.value / 14 + 127;
   let lamp_color_2 = e.target.value / 2.5 + 121;
-  lamp.style.cssText = `filter: drop-shadow(25px -21px ${lamp_shadow}px rgba(${lamp_color_1}, ${lamp_color_2}, ${lamp_color_1}, 1));
+  lamp.style.filter = `drop-shadow(25px -21px ${lamp_shadow}px rgba(${lamp_color_1}, ${lamp_color_2}, ${lamp_color_1}, 1))
  `;
   //  изменим цвет фона
   let bg_color_1 = e.target.value / 10 + 128;
